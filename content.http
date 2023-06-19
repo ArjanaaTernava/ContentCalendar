@@ -1,0 +1,49 @@
+###
+GET http://localhost:8080/api/content
+
+<> 2023-06-15T153733.200.json
+<> 2023-06-15T153219.200.json
+
+###
+GET http://localhost:8080/api/content
+
+<> 2023-06-15T153742.200.json
+
+###
+GET http://localhost:8080/api/content
+
+###
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "My second blog post",
+  "desc": "my second blog post by Arjana",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-06-15T15:49:21.109242249",
+  "dateUpdated": null,
+  "url": ""
+}
+
+<> 2023-06-15T160146.400.html
+<> 2023-06-15T155808.415.json
+
+###update existing content
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "MY SECOND POST!!!",
+  "desc": "my second blog post by Arjana",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-06-15T15:49:21.109242249",
+  "dateUpdated": "2023-06-15T15:49:21.109242249",
+  "url": "http://localhost:8080/my-first-blog-post"
+}
+
+### deletebyid
+DELETE http://localhost:8080/api/content/2
